@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self' data: base64;">
+    <link rel="stylesheet" href="settingStyle.css">
+    <title>Setting</title>
+  </head>
+  <body>
+
+    <div id="setting">
+      <h2>声源 Audio Source:</h2>
+      <div class="audioInput group">
+        <div id="speakerButton">扩音器 speaker</div>
+        <div id="micButton">麦克风 mic</div>
+      </div>
+      <h2>大小 Size:</h2>
+      <div class="size group">
+        <div id="XLButton">XL</div>
+        <div id="LButton">L</div>
+        <div id="MButton">M</div>
+        <div id="SButton">S</div>
+        <div id="XSButton">XS</div>
+      </div>
+      <h2>种类 Type</h2>
+      <div class="draw group">
+        <div id="sineButton">弦 Sine</div>
+        <div id="freqButton">频域 Freq</div>
+      </div>
+    </div>
+    <div id="ok">✓</div>
+
+    <script src="./settingRenderer.js"></script>
+
+  </body>
+</html>

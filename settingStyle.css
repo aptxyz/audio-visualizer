@@ -1,0 +1,107 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-app-region: drag;
+}
+* {
+    user-select: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+#setting > div > div, #ok {
+    -webkit-app-region: no-drag;
+}
+
+#setting {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.25s;
+    border-radius: 15%;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    transition: all 0.25s;
+
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+#setting.show {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+#setting > h2 {
+    /* flex-basis: 100%; */
+    text-align: center;
+}
+#setting > div {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 0.5em;
+}
+#setting > div > div {
+    padding: 6px 12px;
+    margin: 3px 12px;
+}
+
+#setting > div > div {
+    background: rgba(255,255,255,0.85);
+    border: 1px solid rgba(0, 0, 128, 0.8);
+}
+#setting > div > div:hover {
+    border-width: 2px; 
+    padding: 5px 11px;
+}
+#setting > div > div.active {
+    background: rgba(0, 0, 255, 0.1)
+}
+#setting > div > div:active {
+    background: rgba(0, 0, 255, 0.2)
+}
+
+#ok {
+    position: absolute;
+    bottom: calc(50% - 16px);
+    right: calc(50% - 16px);
+    border-radius: 50%;
+    transition: all 0.25s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.5)
+}
+
+#ok.show {
+    bottom: 18px;
+    right: 30px;
+    opacity: 1;
+    width: 32px;
+    height: 32px;
+    
+}
+
+#ok:hover {
+    background: rgba(0, 0, 255, 0.2);
+    border: 1px solid rgba(0, 0, 255, 0.25);
+}
+
+#ok:active {
+    background: rgba(0, 0, 255, 0.3);
+}
